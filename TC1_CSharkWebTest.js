@@ -70,7 +70,6 @@ describe("visitMainCshark", function() {
         cy.get(".circle-container > .circle > .text:eq(1)").then((element) => {
             expect(element.text()).to.include("We know that technology is the future.")
         })
-
         // cy.get(".container-fluid > .image-wrapper-limit > .image-wrapper")
         cy.get('div.row.justify-content-center >\
          div > div > div:nth-child(1) > div.name').then(function(element) {
@@ -165,8 +164,7 @@ describe("visitMainCshark", function() {
         })
         cy.get('.instagram >g >g').then((element) => {
             expect(element).to.have.css('clip-path', 'url("#clip-C97A7A5F-94B3-ABBF-D6DA-DD0FFC8A3B2A")')
-        })
-        
+        })  
     })
     it('carrier', function() {
         cy.get('[href="https://cshark.com/career/"]:eq(0)').click({force: true})
@@ -197,7 +195,6 @@ describe("visitMainCshark", function() {
 
     it('carrierSlider', function() {
         cy.get('[href="https://cshark.com/career/"]:eq(0)').click({force: true})
-
         cy.get('.container-fluid-custom >div >div >div >div >div >div:eq(0)').should('have.attr', 'class', 'circle is-selected' )
         for (let i=0; i<10; i++){
             cy.get('[aria-label="Previous"]').click()
@@ -234,8 +231,4 @@ describe("visitMainCshark", function() {
         cy.contains("KATOWICE OFFICE")
         cy.contains("WROCŁAW HEADQUARTERS")
     })
-
-
-
-
 })
